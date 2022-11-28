@@ -2,7 +2,7 @@ version: "2"
 services:
   r:
     build:
-      context: R
+      context: RStudio
       dockerfile: Dockerfile
     volumes:
       - ./mountpoint:/home/rstudio/myproject
