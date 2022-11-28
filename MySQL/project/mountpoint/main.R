@@ -11,4 +11,4 @@ conn <- dbConnect(
   dbname = "db"
 )
 
-dbGetQuery(conn, "SELECT * FROM mytable LIMIT 10")
+dbGetQuery(conn, "SELECT * FROM mytable")
