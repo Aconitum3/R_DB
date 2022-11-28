@@ -1,0 +1,19 @@
+version: "2"
+services:
+  r:
+    build:
+      context: R
+      dockerfile: Dockerfile
+    volumes:
+      - ./mountpoint:/home/rstudio/myproject
+    ports:
+     - "8787:8787"
+    depends_on:
+      db:
+        condition: service_started
+  db:
+    build:
+      context: DB
+      dockerfile: Dockerfile
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
