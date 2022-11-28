@@ -8,6 +8,6 @@ CREATE TABLE mytable
     name char(20)
 );
 
-LOAD DATA INFILE "/var/lib/mysql-files/mytable.csv" INTO TABLE mytable FIELDS TERMINATED BY "," IGNORE 1 LINES;'
+LOAD DATA INFILE "/var/lib/mysql-files/mytable.csv" INTO TABLE mytable FIELDS TERMINATED BY "," LINES TERMINATED BY "\r\n" IGNORE 1 LINES;'
 
 mysql --user=root --password=root --execute="$COMMAND"
