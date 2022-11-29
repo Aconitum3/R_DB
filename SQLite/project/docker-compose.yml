@@ -1,0 +1,10 @@
+version: "2"
+services:
+  r:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./mountpoint:/home/rstudio/myproject
+    ports:
+     - "8787:8787"
