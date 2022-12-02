@@ -1,0 +1,21 @@
+version: "2"
+services:
+  r:
+    build:
+      context: RStudio
+      dockerfile: Dockerfile
+    volumes:
+      - ./mountpoint:/home/rstudio/myproject
+    ports:
+     - "8787:8787"
+    depends_on:
+      db:
+        condition: service_started
+  db:
+    build:
+      context: DB
+      dockerfile: Dockerfile
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=db
