@@ -25,7 +25,7 @@ DBの起動を少し待った後、`myproject`ディレクトリ下の`main.R`�
 
 ## 各要素の説明
 
-本節ではDockerfileとdocker-compose.ymlの詳しい内容を説明する。
+本節では`Dockerfile`と`docker-compose.yml`の詳しい内容を説明する。
 ### ディレクトリ構成
 ```
 project/
